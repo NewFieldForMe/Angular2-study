@@ -1,11 +1,23 @@
-<md-toolbar color="primary">
-  Myapp
-  <!--<div class="nav-wrapper">
+<nav class="blue">
+  <div class="nav-wrapper">
     <a href="#" class="brand-logo">Logo</a>
     <ul id="nav-mobile" class="right hide-on-med-and-down">
       <li><a href="sass.html">Sass</a></li>
       <li><a href="badges.html">Components</a></li>
       <li><a href="collapsible.html">JavaScript</a></li>
     </ul>
-  </div>-->
-</md-toolbar>
+  </div>
+</nav>
+<div class="container">
+  <div class="row">
+    <md-card>
+      <button md-button>FLAT</button>
+      <button md-raised-button md-tooltip="This is a tooltip!">RAISED</button>
+      <button md-raised-button color="primary">PRIMARY RAISED</button>
+      <button md-raised-button color="accent">ACCENT RAISED</button>
+    </md-card>
+  </div>
+</div>
+<md-input-container>
+  <input md-input placeholder="Favorite food" value="Sushi">
+</md-input-container>
