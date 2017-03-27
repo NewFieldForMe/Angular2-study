@@ -11,6 +11,9 @@ import { NavbarComponent } from './component/navbar/navbar.component';
 import { RouterModule }   from '@angular/router';
 import { MainpageComponent } from './component/mainpage/mainpage.component';
 
+import { ApiService } from './service/api.service';
+import { AuthModule } from './module/auth.module';
+
 let route = RouterModule.forRoot([
   {
     path: 'login',
@@ -34,9 +37,10 @@ let route = RouterModule.forRoot([
     FormsModule,
     HttpModule,
     route,
-    MaterialModule.forRoot()
+    MaterialModule.forRoot(),
+    AuthModule
   ],
-  providers: [],
+  providers: [ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

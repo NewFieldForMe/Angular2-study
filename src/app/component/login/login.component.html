@@ -10,13 +10,13 @@
         <form class="col s12">
           <div class="row">
             <div class="input-field col s12">
-              <input id="email" type="email" class="validate">
+              <input id="email" type="email" class="validate" [(ngModel)]="loginId" name="loginId">
               <label for="email">Email</label>
             </div>
           </div>
           <div class="row">
             <div class="input-field col s12">
-              <input id="pass" type="password" class="validate">
+              <input id="pass" type="password" class="validate" [(ngModel)]="password" name="password">
               <label for="pass">Password</label>
             </div>
           </div>
