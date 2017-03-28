@@ -2,7 +2,18 @@
   <div class="row">
     <div class="col m6">
       <h2>管理システム</h2>
-      <p>業務用テストシステム</p>
+      <div id="card-alert" class="card deep-purple">
+        <div class="card-content white-text">
+          <p><i class="mdi-action-info-outline"></i> 業務用テストシステム</p>
+        </div>
+      </div>
+      <div *ngIf="this.errorMessage">
+        <div id="card-alert" class="card orange">
+          <div class="card-content white-text">
+            <p><i class="mdi-alert-warning"></i> {{this.errorMessage}}</p>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="col m6">
       <h2 class="center-align">Login</h2>
@@ -10,8 +21,8 @@
         <form class="col s12">
           <div class="row">
             <div class="input-field col s12">
-              <input id="email" type="email" class="validate" [(ngModel)]="loginId" name="loginId">
-              <label for="email">Email</label>
+              <input id="loginid" type="text" class="validate" [(ngModel)]="loginId" name="loginId">
+              <label for="loginid">Login ID</label>
             </div>
           </div>
           <div class="row">
@@ -32,11 +43,7 @@
           <div class="row">
             <div class="col m12">
               <p class="right-align">
-                <button 
-                class="btn btn-large waves-effect waves-light" 
-                type="button" 
-                name="action" 
-                (click)="loginClick($event)">
+                <button class="btn btn-large waves-effect waves-light" type="button" name="action" (click)="loginClick($event)">
                 Login
                 </button>
               </p>
