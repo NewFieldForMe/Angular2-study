@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router'
 import { ApiService } from '../../service/api.service';
 import { AuthHttp } from 'angular2-jwt';
+import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -16,11 +17,16 @@ export class LoginComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private apiService: ApiService
+    private apiService: ApiService,
+    private fb: FormBuilder
   ) { }
 
   ngOnInit() {
     this.errorMessage = "";
+  }
+
+  hoge() {
+    return true;
   }
 
   loginClick(event) {

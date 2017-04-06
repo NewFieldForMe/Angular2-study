@@ -10,6 +10,7 @@ import { NavbarComponent } from './component/navbar/navbar.component';
 
 import { RouterModule }   from '@angular/router';
 import { MainpageComponent } from './component/mainpage/mainpage.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { ApiService } from './service/api.service';
 import { AuthModule } from './module/auth.module';
@@ -38,6 +39,7 @@ let route = RouterModule.forRoot([
     HttpModule,
     route,
     MaterialModule.forRoot(),
+    ReactiveFormsModule,
     AuthModule
   ],
   providers: [ApiService],

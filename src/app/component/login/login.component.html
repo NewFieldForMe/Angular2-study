@@ -18,16 +18,16 @@
     <div class="col m6">
       <h2 class="center-align">Login</h2>
       <div class="row">
-        <form class="col s12">
+        <form (ngSubmit)="loginClick($event)" class="col s12">
           <div class="row">
             <div class="input-field col s12">
-              <input id="loginid" type="text" class="validate" [(ngModel)]="loginId" name="loginId">
+              <input [required]="hoge()" id="loginid" type="text" class="validate" [(ngModel)]="loginId" name="loginId">
               <label for="loginid">Login ID</label>
             </div>
           </div>
           <div class="row">
             <div class="input-field col s12">
-              <input id="pass" type="password" class="validate" [(ngModel)]="password" name="password">
+              <input required id="pass" type="password" class="validate" [(ngModel)]="password" name="password">
               <label for="pass">Password</label>
             </div>
           </div>
@@ -43,7 +43,7 @@
           <div class="row">
             <div class="col m12">
               <p class="right-align">
-                <button class="btn btn-large waves-effect waves-light" type="button" name="action" (click)="loginClick($event)">
+                <button class="btn btn-large waves-effect waves-light" type="submit" name="action">
                 Login
                 </button>
               </p>
